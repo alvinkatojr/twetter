@@ -4,7 +4,9 @@
       <%= content_tag :strong, current_user.name %>
     </li>
     <li>
-      <%= content_tag :small, '@'+current_user.username %>
+      <p>
+        <a href="/<%= current_user.username %>"><%= content_tag :small, '@'+current_user.username %></a>
+      </p>
     </li>
     <li>
       <table class="table table-bordered stats">
