@@ -1,6 +1,13 @@
 module ApplicationHelper
   # Being the ApplicationHelper, all methods herein are available in all views.
 
+  # Gravatar helper file
+
+  def avatar_url
+    gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
+    "http://gravatar.com/avatar/#{gravatar_id}.png"
+  end
+
   # Responsible for generating the appropriate form to follow or unfollow a user. If the
   # authenticated user is already following the user passed, an unfollow (DELETE) form
   # will be generated. Otherwise, a follow (CREATE) form will be generated.
