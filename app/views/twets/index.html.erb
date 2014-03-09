@@ -12,6 +12,7 @@
     <ol class="list-unstyled">
       <% @twets.each do |twet| -%>
       <li>
+        <%= image_tag avatar_url(user) %>
         <%= content_tag :strong, twet.user.name, :class => 'pull-left text-middle' %>
         <a href="<%= twet.user.username %>">
           <%= content_tag :small, "@"+twet.user.username, :class => 'text-muted pad-10 text-middle' %>
