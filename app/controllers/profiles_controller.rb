@@ -1,11 +1,6 @@
 class ProfilesController < ApplicationController
   def show
-    if params[:username]
-      @user = User.where(:username => params[username]).first
-      @twets = Twet.by_user_ids(@user.id) if @user
-    else
-      @twets = current_user.all_twets
-    end
+    @user = User.find_by_username(params[:username])
   end
 
 
