@@ -18,7 +18,8 @@
           <%= content_tag :small, twet.created_at.strftime("%b %-d"), :class => 'text-muted text-middle pull-right' %>
         </a>
         <div class="clearfix"></div>
-        <%= content_tag :p, twet.content %>
+          <%= content_tag :p, username_converter(twet.content).html_safe %>
+
       </li>
       <li><hr></li>
       <% end -%>
