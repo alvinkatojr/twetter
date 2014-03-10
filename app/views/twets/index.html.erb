@@ -21,6 +21,17 @@
         <div class="clearfix"></div>
           <%= content_tag :p, username_converter(twet.content).html_safe %>
 
+        <div class="clearfix"></div>
+          <%= content_tag :div, :class => 'pull-right' do %>
+            <%= form_for :retwet, :url => 'retwets_path', :method => 'POST', :role => :form do |f| %>
+              <%= hidden_field_tag :return_to, request.original_url %>
+              <%= f.hidden_field :twet_id, :value => twet.id.to_s %>
+              <span class="glyphicon glyphicon-retweet smaller text-primary"></span>
+              <%= f.submit "Retwet".html_safe, :class => 'btn btn-link smaller' %>
+            <% end %>
+          <% end %>
+        <div class="clearfix"></div>
+
       </li>
       <li><hr></li>
       <% end -%>
