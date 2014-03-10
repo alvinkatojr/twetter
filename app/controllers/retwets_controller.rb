@@ -1,0 +1,2 @@
+class RetwetsController < ApplicationController
+end
