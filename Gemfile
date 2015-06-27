@@ -2,21 +2,18 @@ source 'https://rubygems.org'
 
 ruby '2.2.1'
 
-gem 'rails', '4.0.0'
-gem 'sqlite3'
-gem 'sass-rails', '~> 4.0.0'
+gem 'rails',          '4.0.0'
 gem 'bootstrap-sass', '~> 3.0.0.0.rc'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'therubyracer', platforms: :ruby
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
-gem 'devise'
+gem 'coffee-rails',   '~> 4.0.0'
+gem 'jbuilder',       '~> 1.2'
+gem 'sass-rails',     '~> 4.0.0'
+gem 'uglifier',       '>= 1.3.0'
 
-group :doc do
-  gem 'sdoc', require: false
-end
+gem 'jquery-rails'
+gem 'devise'
+gem 'sqlite3'
+gem 'therubyracer'
+gem 'turbolinks'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
