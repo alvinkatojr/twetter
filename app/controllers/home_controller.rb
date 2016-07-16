@@ -7,6 +7,5 @@ class HomeController < ApplicationController
   # code is actually required here.
   #
   def index
-
   end
 end
